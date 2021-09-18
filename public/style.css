@@ -52,15 +52,6 @@ body {
 .head {
     text-align: center;
     padding: 1rem;
-    opacity: 0;
-    transition: all 500ms ease-in-out;
-    transform: translateY(4rem);
-}
-
-/* helper to show the head */
-.head-show {
-    opacity: 1;
-    transform: translateY(0rem);
 }
 
 .content {
@@ -80,23 +71,6 @@ body {
     flex-direction: row;
     background-color: transparent;
     justify-content: center;
-}
-
-.temprature {
-    opacity: 0;
-    transform: translateY(-4rem);
-}
-
-.description {
-    opacity: 0;
-    transform: translateY(-4rem);
-}
-
-/* helper to show the temprature and description */
-.box-show {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 500ms ease-in-out;
 }
 
 .entry {
