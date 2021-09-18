@@ -1,0 +1,129 @@
+:root {
+    --clr-dark: #333;
+    --clr-gray: #808080;
+    --clr-light: #eef5f1;
+    --clr-green: #42F584;
+    --clr-blue: #4BB6FF;
+    --clr-orange: #FF9A00;
+    --clr-grd: linear-gradient(#FF9A00, #42F584, #4BB6FF, #0e110e 50%);
+    --clr-grd-f: linear-gradient(#FF9A00, #42F584, #4BB6FF);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    color: var(--clr-dark);
+    font-size: 1.2rem;
+}
+
+.margin {
+    margin: 0.5rem;
+}
+.padding {
+    padding: 1rem;
+}
+.alignC {
+    text-align: center;
+}
+.box {
+    background-color: rgba(51, 51, 51, 70%);
+    border-radius: 3rem;
+    color: var(--clr-light);
+}
+.white {
+    color: var(--clr-light);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 90vh;
+    background-image: url(img.jpg);
+    background-size: cover;
+}
+
+.head {
+    text-align: center;
+    padding: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    justify-content: center;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    color: var(--clr-light);
+}
+
+.entry input {
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    border: none;
+    border-radius: 2rem;
+}
+
+.entry input:focus {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+}
+
+.error {
+    background-color: var(--clr-green);
+    opacity: 0;
+    width: 50%;
+    align-self: center;
+    transform: translateY(-75%);
+    border-radius: 3rem;
+}
+
+.submit {
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(75, 182, 255, 70%);
+    color: var(--clr-dark);
+    border-radius: 2rem;
+    width: 100%;
+    align-self: center;
+}
+
+.submit:focus {
+    background-color: rgba(75, 182, 255, 70%);
+    color: var(--clr-dark);
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+}
+
+.feeling {
+    align-self: center;
+}
