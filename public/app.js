@@ -16,6 +16,11 @@ const generate = () => {
     const zip = document.getElementById('entry').value;
     const feeling = document.getElementById('feeling').value;
 
+    // these are for showing the boxes of info
+    const head = document.querySelector('.head');
+    const temprature = document.querySelector('.temprature');
+    const disc = document.querySelector('.description');
+
     // function to destructure the response opject that we get after passing the zip code the the getWeatherData function
     getWeatherData(zip).then((data) => {
         if (data) {
@@ -43,6 +48,11 @@ const generate = () => {
             // here we call the function that updates the UI for the user
             update();
 
+            // showing the divs containing the conuntry, temprature and weather description
+            head.classList.add('head-show');
+            disc.classList.add('box-show');
+            temprature.classList.add('box-show');
+            
         }
     })
 }
