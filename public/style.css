@@ -99,7 +99,7 @@ body {
     color: var(--clr-light);
 }
 
-.entry input {
+.entry input,textarea  {
     text-align: center;
     margin: 1rem;
     padding: 1rem;

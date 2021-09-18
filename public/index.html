@@ -9,32 +9,32 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="entryHolder">
     <div class="head padding box">
       Country
     </div>
     <div class="content">
       <div class="general padding margin box">
-        <div class="date alignC white"></div>
+        <div class="date alignC white" id="date"></div>
         <div class="city alignC white">City</div>
       </div>
       <div class="data-container">
         <div class="box temprature margin padding">
           <div class="data-title alignC white">Temprature</div>
-          <div class="temp alignC white"></div>
+          <div class="temp alignC white" id="temp"></div>
         </div>
         <div class="box description margin padding">
-          <div class="data-title alignC white">description</div>
-          <div class="desc alignC white"></div>
+          <div class="data-title alignC white">Description</div>
+          <div class="desc alignC white" id="content"></div>
         </div>
       </div>
       <div class="entry">
-        <input type="text" name="zip code" id="entry" placeholder="Enter your zip code">
+        <input type="text" name="zip code" id="zip" placeholder="Enter your zip code">
         <div class="error alignC ">error</div>
         <div class="feeling">
-          <input type="text" name="feeling" id="feeling" placeholder="How are you feeling today?">
+          <textarea type="text" name="feeling" id="feelings" placeholder="How are you feeling today?"></textarea>
         </div>
-        <button id="btn" class="submit">Generate</button>
+        <button id="generate" class="submit">Generate</button>
       </div>
     </div>
   </div>

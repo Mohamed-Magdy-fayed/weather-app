@@ -9,12 +9,12 @@ let d = new Date();
 let newDate = d.toDateString();
 
 // populating the date in it's location
-document.querySelector('.date').innerHTML = newDate;
+document.getElementById('date').innerHTML = newDate;
 
 // function to run on button click to generate the needed data
 const generate = () => {
-    const zip = document.getElementById('entry').value;
-    const feeling = document.getElementById('feeling').value;
+    const zip = document.getElementById('zip').value;
+    const feeling = document.getElementById('feelings').value;
 
     // these are for showing the boxes of info
     const head = document.querySelector('.head');
@@ -42,6 +42,8 @@ const generate = () => {
                 country
             };
 
+            console.log(info);
+
             // calling the post function to save the new opject on the local server
             postData(server + '/add', info);
 
@@ -55,10 +57,12 @@ const generate = () => {
             
         }
     })
+
+    console.log(`all weather data has been generated`);
 }
 
 // added the event listener to the button to run the generate function
-document.getElementById('btn').addEventListener('click', generate);
+document.getElementById('generate').addEventListener('click', generate);
 
 // creates the main function GET the date from the api
 const getWeatherData = async (zip) => {
@@ -105,6 +109,7 @@ const postData = async (url = '', info = {}) => {
         const newData = await res.json();
 
         // we return the data here so we can use it in the next function to populate the UI
+        console.log(`You just posted ${newData}`);
         return newData;
 
     } catch (error) {
@@ -122,13 +127,14 @@ const update = async () => {
         const savedData = await res.json();
 
         // then we put each property in it's location on the UI
-        document.querySelector('.date').innerHTML = savedData.newDate;
+        document.getElementById('date').innerHTML = savedData.newDate;
         document.querySelector('.head').innerHTML = savedData.country;
         document.querySelector('.city').innerHTML = savedData.city;
-        document.querySelector('.temp').innerHTML = savedData.temp + '&degC';
-        document.querySelector('.desc').innerHTML = savedData.description;
-        document.querySelector('#feeling').innerHTML = savedData.feeling;
+        document.getElementById('temp').innerHTML = savedData.temp + '&degC';
+        document.getElementById('content').innerHTML = savedData.description;
+        document.getElementById('feelings').innerHTML = savedData.feeling;
 
+        console.log(savedData);
     } catch (error) {
         console.log(error);
     }
