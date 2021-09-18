@@ -1,3 +1,4 @@
+/* personal color scheme and general options *******/
 :root {
     --clr-dark: #333;
     --clr-gray: #808080;
@@ -16,7 +17,9 @@
     color: var(--clr-dark);
     font-size: 1.2rem;
 }
+/* personal color scheme and general options *******/
 
+/* helper classes */
 .margin {
     margin: 0.5rem;
 }
@@ -35,6 +38,7 @@
     color: var(--clr-light);
 }
 
+/* main */
 body {
     display: grid;
     place-content: center;
@@ -44,6 +48,7 @@ body {
     background-repeat: no-repeat;
 }
 
+/* main classes */
 .head {
     text-align: center;
     padding: 1rem;
@@ -52,6 +57,7 @@ body {
     transform: translateY(4rem);
 }
 
+/* helper to show the head */
 .head-show {
     opacity: 1;
     transform: translateY(0rem);
@@ -86,6 +92,7 @@ body {
     transform: translateY(-4rem);
 }
 
+/* helper to show the temprature and description */
 .box-show {
     opacity: 1;
     transform: translateY(0);
@@ -113,7 +120,8 @@ body {
     border-radius: 2rem;
 }
 
-.entry input:focus {
+/* removing focus state for the two inputs */
+.entry input:focus, textarea:focus {
     background-color: var(--clr-dark);
     color: var(--clr-light);
     border: none;
@@ -141,12 +149,10 @@ body {
     align-self: center;
 }
 
+.submit:hover,
 .submit:focus {
-    background-color: rgba(75, 182, 255, 70%);
-    color: var(--clr-dark);
-    border: none;
-    outline: none;
-    border-radius: 2rem;
+    background-color: rgba(51, 51, 51, 70%);
+    color: var(--clr-light);
 }
 
 .feeling {
