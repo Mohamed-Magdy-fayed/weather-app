@@ -88,9 +88,8 @@ const generateWeather = () => {
             date.innerHTML = responseJson.date;
             head.innerHTML = responseJson.country;
             city.innerHTML = responseJson.city;
-            temp.innerHTML = responseJson.temp;
-            content.innerHTML = responseJson.description;
-            feelings.innerHTML = responseJson.feeling;
+            temp.innerHTML = Math.round(responseJson.temp) + '&degC';
+            content.innerHTML = responseJson.feeling;
 
         } catch (error) {
             console.log(error);
